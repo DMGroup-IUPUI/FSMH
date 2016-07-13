@@ -1,0 +1,16 @@
+How to use:
+
+step 1: perl Filtering.pl <input_file> <support>
+example: perl Filtering.pl biodeq.interactive 50 
+
+step 2: 
+mkdir biodeq_partition
+
+step 3:
+with equal number of transaction in each partition heuristics: 
+perl create_partition_data_scheme_transactioncount.pl <output from step 1> <data dir name> <number of partition>
+example: perl create_partition_data_scheme_transactioncount.pl biodeq.interactive.filtered biodeq_partition 20
+
+with equal number of edge count in each partition heuristics:
+perl create_partition_data_scheme_edge_count.pl <output from step 1> <data dir name> <multiply factor to multiply with average edge count>
+example: perl create_partition_data_scheme_edge_count.pl biodeq.interactive.filtered biodeq_partition 10

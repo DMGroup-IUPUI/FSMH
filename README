@@ -1,0 +1,9 @@
+How to use:
+
+Copy .tar in the hadoop Home directory and extract.
+copy the data directory containing partitioned input file in HDFS.
+
+compile the code using ./compile.sh command. This code is compiled with hadoop 0.20.203.0 as well as hadoop 1.1. Edit compile.sh
+as per system's current hadoop version.
+
+edit execute.sh scripts with updated input and output path in HDFS as well as set the other parameter. 
